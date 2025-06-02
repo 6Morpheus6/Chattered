@@ -11,7 +11,7 @@ module.exports = {
           "python chattered.py",
         ],
         on: [{
-          "event": "/http:\/\/\\S+/",   
+          "event": "/http:\\/\\/[^=\\s]+/",   
           "done": true
         }]
       }
