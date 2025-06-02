@@ -1,8 +1,8 @@
 const path = require('path')
 module.exports = {
   version: "3.7",
-  title: "Chattered.git",
-  description: "",
+  title: "Chattered",
+  description: "All in one Gradio interface for chatterbox. Voice cloning from uploaded audio samples, automatic text processing for long content and real-time speech generation with configurable parameters. (Minimum Requirements 4GB VRAM / Recommended Requirements 8GB VRAM)",
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")
