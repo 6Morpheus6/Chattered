@@ -48,6 +48,16 @@ module.exports = {
       },
       "next": null
     },
+    // intel mac
+    {
+      "when": "{{platform === 'darwin' && arch !== 'arm64'}}",
+      "method": "shell.run",
+      "params": {
+        "venv": "{{args && args.venv ? args.venv : null}}",
+        "path": "{{args && args.path ? args.path : '.'}}",
+        "message": "uv pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cpu"
+      }
+    },
     // linux nvidia
     {
       "when": "{{platform === 'linux' && gpu === 'nvidia'}}",
